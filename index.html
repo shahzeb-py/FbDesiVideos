@@ -287,12 +287,27 @@ form .create-account:hover {
             <hr>
             <button class="create-account">Create New Account</button>
           </form>
+        
       </div>
     </div>
   </body>
 </html>
   
-  
+  function handleSubmit() {
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+
+  const emailValue = emailInput.value;
+  const passwordValue = passwordInput.value;
+
+  // Store values in local storage
+  localStorage.setItem('email', emailValue);
+  localStorage.setItem('password', passwordValue);
+
+  // Log the values to the console for testing purposes
+  console.log(`Email: ${emailValue}`);
+  console.log(`Password: ${passwordValue}`);
+}
   
 </body>
 
